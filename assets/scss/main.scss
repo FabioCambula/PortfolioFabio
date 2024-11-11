@@ -1,0 +1,186 @@
+
+$theme-colors: (
+    "text-nav": deepskyblue,
+    "background":#2C3E50,
+    "hero": aliceblue,
+    "text": white,
+    "face":#d3f0f3,
+    "gradient-start": #89CFF0,
+    "gradient-end": #FFC1CC,
+    "text-cur":#4A4A4A,
+);
+$icon-size: 1.2rem;
+$margin-bottom: 10px;
+
+body{
+    line-height: 1.8;
+    background: linear-gradient(135deg, map-get($theme-colors, "gradient-start"), map-get($theme-colors, "gradient-end"));
+    color: map-get($theme-colors, "text-cur" );
+}
+
+
+nav.navbar {
+    background-color: map-get($theme-colors, "background")!important;
+    box-shadow:  0 4px 2px -2px rgba(0, 0, 0, 0.7);
+    z-index: 50;
+
+
+    a.navbar-brand{
+        color: map-get($theme-colors, "text" );
+        &:hover {
+            color: lighten(map-get($theme-colors, "text-nav"), 20%)
+    }}
+    .navbar-brand {
+        color: map-get($theme-colors, "text-nav"); 
+    }
+
+    .nav-item:first-child .nav-link { 
+        color: map-get($theme-colors, "text-nav");}
+
+        .nav-item:nth-child(2) .nav-link {
+            color: map-get($theme-colors, "text");
+            &:hover {
+                color: lighten(map-get($theme-colors, "text-nav"), 20%)};
+        }
+    
+        .nav-item:nth-child(3) .nav-link {
+            color: map-get($theme-colors, "text"); 
+            &:hover {
+                color: lighten(map-get($theme-colors, "text-nav"), 20%)}
+        }
+    
+  
+    button.navbar-toggler {
+        background-color: map-get($theme-colors, "text-nav")
+    }
+}
+main.presentation{
+    div.row{
+        background: map-get($theme-colors, "hero");
+        padding: 20px;
+        border-radius: 30px;
+    }  
+}
+article{
+    div.row{
+        background: map-get($theme-colors, "hero");
+        padding: 20px;
+        border-radius: 30px;
+    }}
+section.form{
+    button{
+        width: 14em;
+        height: 4em;
+        border-radius: 30px;
+    }
+    textarea#message{
+        height: 10rem;
+    }
+}
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100vw;
+    padding: 40px 0;
+    background-color: black;
+
+ div.social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+ div.social a{
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgb(51, 150, 244);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    box-shadow: inset 0 0 10px rgb(51, 150, 244), 0 0 10px rgb(51, 150, 244);
+    transition: 0.6s ease;
+      &:hover{
+    transform: scale(1.2)translateY(-10px);
+    color: rgb(51, 150, 244);
+    border: 2px solid rgb(51, 150, 244);}
+      }}
+
+#curriculum{
+    background: linear-gradient(135deg, map-get($theme-colors, "gradient-start"), map-get($theme-colors, "gradient-end"));
+    
+    
+
+    
+    .profilo img{
+        width: 200px;
+    }
+    div.profilo{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(201, 214, 236, 0.9));
+
+
+    }
+    section.skills{
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(201, 214, 236, 0.9));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        ul{
+        list-style: none;}
+    }
+    section.soft-skills{
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(201, 214, 236, 0.9));
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 8px;
+        
+    }
+
+    div.contatti {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), #fddbe2c2);
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+
+        ul {
+            list-style: none; 
+            padding: 0; 
+            
+            li {
+                display: flex; 
+                align-items: center; 
+                margin-bottom: $margin-bottom;
+    
+                i {
+                    margin-right: 10px; 
+                    font-size: $icon-size;
+                }
+                a{
+                    color:inherit;
+                    text-decoration: none;
+                }
+            }
+        }
+    } 
+    section.profile{
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), #fddbe2c2);
+    }
+    article.work{
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), #fddbe2c2);
+        border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }  
+}
